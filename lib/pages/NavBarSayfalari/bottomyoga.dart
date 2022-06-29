@@ -1,21 +1,21 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'package:kaanuyg/chest/chestbeginner.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
-  runApp(const anaSayfa());
+  runApp(const yogaSayfasi());
 }
 
-class anaSayfa extends StatelessWidget {
-  const anaSayfa({Key? key}) : super(key: key);
+class yogaSayfasi extends StatelessWidget {
+  const yogaSayfasi({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.black38,
+          backgroundColor: Colors.lightGreen,
           title: const Center(
-            child: Text("AnaSayfa         "),
+            child: const Text("AnaSayfa"),
           ),
         ),
         body: Center(
@@ -26,19 +26,23 @@ class anaSayfa extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: InkWell(
                     onTap: () {
-                      Navigator.push(context,
+               /*       Navigator.push(context,
 
-                          MaterialPageRoute(builder: (context) => const beginnerChest()));
+                          MaterialPageRoute(builder: (context) => beginnerChest()));
+
+ */
                     },
                     splashColor: Colors.brown.withOpacity(0.1),
                     child: Ink(
-                      child: const Text(
-                        "  CHEST BEGINNER",
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 25,
+                      child: const Center(
+                        child: const Text(
+                          "INNER PEACE",
+
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black45,
+                            fontSize: 25,
+                          ),
                         ),
                       ),
                       height: 200,
@@ -46,7 +50,7 @@ class anaSayfa extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
-                          image: AssetImage('assets/images/chest1.jpg'),
+                          image: const AssetImage('assets/images/yoga1.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -59,13 +63,15 @@ class anaSayfa extends StatelessWidget {
                     onTap: () {},
                     splashColor: Colors.brown.withOpacity(0.1),
                     child: Ink(
-                      child: const Text(
-                        "  CHEST INTERMEDIATE",
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 25,
+                      child: const Center(
+                        child: const Text(
+                          "TWIST DETOX",
+
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black45,
+                            fontSize: 25,
+                          ),
                         ),
                       ),
                       height: 200,
@@ -73,7 +79,7 @@ class anaSayfa extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
-                          image: AssetImage('assets/images/chest2.jpg'),
+                          image: const AssetImage('assets/images/yoga2.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -86,13 +92,15 @@ class anaSayfa extends StatelessWidget {
                     onTap: () {},
                     splashColor: Colors.brown.withOpacity(0.1),
                     child: Ink(
-                      child: const Text(
-                        "  CHEST ADVANCED",
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 25,
+                      child: const Center(
+                        child: const Text(
+                          "SLOW FLOW",
+
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black45,
+                            fontSize: 25,
+                          ),
                         ),
                       ),
                       height: 200,
@@ -100,7 +108,7 @@ class anaSayfa extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
-                          image: AssetImage('assets/images/chest3.jpg'),
+                          image: const AssetImage('assets/images/yoga3.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -113,13 +121,15 @@ class anaSayfa extends StatelessWidget {
                     onTap: () {},
                     splashColor: Colors.brown.withOpacity(0.1),
                     child: Ink(
-                      child: const Text(
-                        "  ABS BEGINNER",
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 25,
+                      child: const Center(
+                        child: const Text(
+                          "FLEXIBLE FLOW",
+
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black45,
+                            fontSize: 25,
+                          ),
                         ),
                       ),
                       height: 200,
@@ -127,7 +137,7 @@ class anaSayfa extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
-                          image: AssetImage('assets/images/abs1.jpg'),
+                          image: const AssetImage('assets/images/yoga4.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -140,13 +150,15 @@ class anaSayfa extends StatelessWidget {
                     onTap: () {},
                     splashColor: Colors.brown.withOpacity(0.1),
                     child: Ink(
-                      child: const Text(
-                        "  ABS ADVANCED",
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 25,
+                      child: const Center(
+                        child: Text(
+                          "POWER FLOW",
+
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black45,
+                            fontSize: 25,
+                          ),
                         ),
                       ),
                       height: 200,
@@ -154,7 +166,7 @@ class anaSayfa extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
-                          image: AssetImage('assets/images/abs2.jpg'),
+                          image: AssetImage('assets/images/yoga5.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -167,13 +179,15 @@ class anaSayfa extends StatelessWidget {
                     onTap: () {},
                     splashColor: Colors.brown.withOpacity(0.1),
                     child: Ink(
-                      child: const Text(
-                        "  ABS INTERMEDIATE",
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 25,
+                      child: const Center(
+                        child: Text(
+                          "POWERFLOV",
+
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black45,
+                            fontSize: 25,
+                          ),
                         ),
                       ),
                       height: 200,
@@ -181,7 +195,7 @@ class anaSayfa extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
-                          image: AssetImage('assets/images/abs3.jpg'),
+                          image: AssetImage('assets/images/yoga6.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),

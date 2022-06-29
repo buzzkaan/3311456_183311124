@@ -1,41 +1,33 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:kaanuyg/girisekran.dart';
-import 'package:kaanuyg/pages/home.dart';
-import 'package:kaanuyg/services/auth.dart';
 
 class createAccount extends StatefulWidget {
+  const createAccount({Key? key}) : super(key: key);
+
   @override
   _createAccount createState() => _createAccount();
 }
 
 class _createAccount extends State<createAccount> {
-  AuthService _authService = AuthService();
   @override
   Widget build(BuildContext context) {
-    final TextEditingController _nameController = TextEditingController();
-    final TextEditingController _emailController = TextEditingController();
-    final TextEditingController _passwordController = TextEditingController();
-    final TextEditingController _passwordAgainController =
-    TextEditingController();
-    final screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
       appBar: AppBar(
 
-        title: Text(
+        title: const Text(
           "Kayıt Ol",
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
       ),
-      body: arkaPlan(),
+      body: const arkaPlan(),
     );
   }
 }
 
 class arkaPlan extends StatefulWidget {
-  arkaPlan({Key? key}) : super(key: key);
+  const arkaPlan({Key? key}) : super(key: key);
 
   @override
   State<arkaPlan> createState() => _arkaPlanState();
@@ -45,9 +37,6 @@ class _arkaPlanState extends State<arkaPlan> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _passwordAgainController =
-  TextEditingController();
-  AuthService _authService = AuthService();
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
@@ -55,7 +44,7 @@ class _arkaPlanState extends State<arkaPlan> {
     return Container(
       width: screenSize.width,
       height: screenSize.height,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
       color: Colors.lightBlue
       ),
 
@@ -63,14 +52,14 @@ class _arkaPlanState extends State<arkaPlan> {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top: 0.0),
+              const Padding(
+                padding: EdgeInsets.only(top: 0.0),
                 child: Center(
-                  child: Container(
+                  child: SizedBox(
                       width: 230,
                       height: 200,
 
-                      child: Image(image: AssetImage("assets/images/logo.png"))),
+                      child: Image(image: AssetImage("assets/images/abs1.png"))),
                 ),
               ),
               Padding(
@@ -86,12 +75,12 @@ class _arkaPlanState extends State<arkaPlan> {
                     color: Colors.white38,
                   ),
 
-                  child: new TextField(
+                  child: TextField(
                     cursorColor: Colors.black54,
                     controller: _nameController,
-                    style: TextStyle(color: Colors.black54),
+                    style: const TextStyle(color: Colors.black54),
                     textAlign: TextAlign.center,
-                    decoration: new InputDecoration(
+                    decoration: const InputDecoration(
                         enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Colors.transparent,
@@ -105,11 +94,11 @@ class _arkaPlanState extends State<arkaPlan> {
                         labelStyle: TextStyle(color: Colors.black54),
                         hintStyle: TextStyle(
                             color: Color.fromARGB(153, 255, 255, 255)),
-                        prefixIcon: const Icon(
+                        prefixIcon: Icon(
                           Icons.people_alt,
                           color: Colors.black54,
                         ),
-                        suffixStyle: const TextStyle(color: Colors.green)),
+                        suffixStyle: TextStyle(color: Colors.green)),
                   ),
                 ),
               ),
@@ -122,16 +111,14 @@ class _arkaPlanState extends State<arkaPlan> {
                   height: screenSize.height * .088,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(22),
-
-
                     color: Colors.white38,
                   ),
-                  child: new TextField(
+                  child: TextField(
                     cursorColor: Colors.white,
                     controller: _emailController,
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                     textAlign: TextAlign.center,
-                    decoration: new InputDecoration(
+                    decoration: const InputDecoration(
                         enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Colors.transparent,
@@ -140,19 +127,19 @@ class _arkaPlanState extends State<arkaPlan> {
                             borderSide: BorderSide(
                               color: Colors.transparent,
                             )),
-                        border: new OutlineInputBorder(
-                            borderSide: new BorderSide(
+                        border: OutlineInputBorder(
+                            borderSide: BorderSide(
                                 color: Color.fromARGB(255, 6, 253, 228))),
                         hintText: 'E-posta adresinizi giriniz...',
                         labelText: 'E-posta',
                         labelStyle: TextStyle(color: Colors.black54),
                         hintStyle: TextStyle(
                             color: Colors.black54),
-                        prefixIcon: const Icon(
+                        prefixIcon: Icon(
                           Icons.email,
                           color: Colors.black54,
                         ),
-                        suffixStyle: const TextStyle(color: Colors.green)),
+                        suffixStyle: TextStyle(color: Colors.green)),
                   ),
                 ),
               ),
@@ -168,14 +155,14 @@ class _arkaPlanState extends State<arkaPlan> {
 
                     color: Colors.white38,
                   ),
-                  child: new TextField(
-                    style: TextStyle(
+                  child: TextField(
+                    style: const TextStyle(
                       color: Colors.black54,
                     ),
                     cursorColor: Colors.black54,
                     controller: _passwordController,
                     obscureText: true,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       prefixIcon: Icon(
                         Icons.vpn_key,
                         color: Colors.black54,
@@ -206,7 +193,7 @@ class _arkaPlanState extends State<arkaPlan> {
                         borderRadius: BorderRadius.circular(10),
                        color: Colors.white.withOpacity(0.3)
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "Kayıt ol",
                         style: TextStyle(

@@ -1,27 +1,33 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:kaanuyg/NavBarSayfalari/bottomanasayfa.dart';
 
-import 'package:kaanuyg/chest/chestbeginner.dart';
-import 'package:kaanuyg/main.dart';
+
 
 void main() {
-  runApp(const yogaSayfasi());
+  runApp(const diyetSayfasi());
 }
 
-class yogaSayfasi extends StatelessWidget {
-  const yogaSayfasi({Key? key}) : super(key: key);
+class diyetSayfasi extends StatefulWidget {
+  const diyetSayfasi({Key? key}) : super(key: key);
+
+  @override
+  State<diyetSayfasi> createState() => _diyetSayfasiState();
+}
+
+class _diyetSayfasiState extends State<diyetSayfasi> {
+
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.lightGreen,
-          title: const Center(
-            child: const Text("AnaSayfa"),
-          ),
+      appBar: AppBar(
+        backgroundColor: Colors.orange,
+        title: const Center(
+          child: Text("Diyet"),
         ),
+      ),
         body: Center(
           child: SingleChildScrollView(
             child: Column(
@@ -30,21 +36,21 @@ class yogaSayfasi extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: InkWell(
                     onTap: () {
-               /*       Navigator.push(context,
+                   /*   Navigator.push(context,
 
                           MaterialPageRoute(builder: (context) => beginnerChest()));
 
- */
+                    */
                     },
                     splashColor: Colors.brown.withOpacity(0.1),
                     child: Ink(
                       child: const Center(
-                        child: const Text(
-                          "INNER PEACE",
+                        child: Text(
+                          "Day 1",
 
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Colors.black45,
+                            color: Colors.white70,
                             fontSize: 25,
                           ),
                         ),
@@ -54,94 +60,7 @@ class yogaSayfasi extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
-                          image: const AssetImage('assets/images/yoga1.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: InkWell(
-                    onTap: () {},
-                    splashColor: Colors.brown.withOpacity(0.1),
-                    child: Ink(
-                      child: const Center(
-                        child: const Text(
-                          "TWIST DETOX",
-
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black45,
-                            fontSize: 25,
-                          ),
-                        ),
-                      ),
-                      height: 200,
-                      width: 400,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        image: const DecorationImage(
-                          image: const AssetImage('assets/images/yoga2.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: InkWell(
-                    onTap: () {},
-                    splashColor: Colors.brown.withOpacity(0.1),
-                    child: Ink(
-                      child: const Center(
-                        child: const Text(
-                          "SLOW FLOW",
-
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black45,
-                            fontSize: 25,
-                          ),
-                        ),
-                      ),
-                      height: 200,
-                      width: 400,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        image: const DecorationImage(
-                          image: const AssetImage('assets/images/yoga3.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: InkWell(
-                    onTap: () {},
-                    splashColor: Colors.brown.withOpacity(0.1),
-                    child: Ink(
-                      child: const Center(
-                        child: const Text(
-                          "FLEXIBLE FLOW",
-
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black45,
-                            fontSize: 25,
-                          ),
-                        ),
-                      ),
-                      height: 200,
-                      width: 400,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        image: const DecorationImage(
-                          image: const AssetImage('assets/images/yoga4.jpg'),
+                          image: AssetImage('assets/images/day1.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -156,11 +75,11 @@ class yogaSayfasi extends StatelessWidget {
                     child: Ink(
                       child: const Center(
                         child: Text(
-                          "POWER FLOW",
+                          "Day 2",
 
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Colors.black45,
+                            color: Colors.white70,
                             fontSize: 25,
                           ),
                         ),
@@ -170,7 +89,7 @@ class yogaSayfasi extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
-                          image: AssetImage('assets/images/yoga5.jpg'),
+                          image: AssetImage('assets/images/day2.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -185,11 +104,11 @@ class yogaSayfasi extends StatelessWidget {
                     child: Ink(
                       child: const Center(
                         child: Text(
-                          "POWERFLOV",
+                          "Day 3",
 
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Colors.black45,
+                            color: Colors.white70,
                             fontSize: 25,
                           ),
                         ),
@@ -199,16 +118,48 @@ class yogaSayfasi extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
-                          image: AssetImage('assets/images/yoga6.jpg'),
+                          image: const AssetImage('assets/images/day3.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
                     ),
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: InkWell(
+                    onTap: () {},
+                    splashColor: Colors.brown.withOpacity(0.1),
+                    child: Ink(
+                      child: const Center(
+                        child: Text(
+                          "Day 4",
+
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white70,
+                            fontSize: 25,
+                          ),
+                        ),
+                      ),
+                      height: 200,
+                      width: 400,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        image: const DecorationImage(
+                          image: const AssetImage('assets/images/Day4.jpg'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+
+
               ],
             ),
           ),
-        ));
+        ),
+    );
   }
 }

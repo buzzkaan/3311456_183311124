@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kaanuyg/begginerickisim/beginnerchest1.dart';
-import 'package:kaanuyg/begginerickisim/dizpushup.dart';
-import 'package:kaanuyg/begginerickisim/pushups.dart';
+import 'package:kaanuyg/pages/begginerickisim/beginnerchest1.dart';
+import 'package:kaanuyg/pages/begginerickisim/dizpushup.dart';
+import 'package:kaanuyg/pages/begginerickisim/pushups.dart';
 
 class beginnerChest extends StatefulWidget {
   const beginnerChest({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class _beginnerChestState extends State<beginnerChest> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: Text("kaan"),
+        title: Text("Chest Antrenmanı"),
       ),
       body: ListView(
         children: [
@@ -142,6 +142,119 @@ class _beginnerChestState extends State<beginnerChest> {
               ),
             ),
           ),
+
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ListTile(
+              visualDensity: VisualDensity(vertical:4),
+              title: Text("Wide Arm Push-Ups",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),),
+              subtitle: Text("x10"),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(4)),
+              onTap: () {
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => wide(
+
+                    ),
+                  ),
+                );
+
+              },
+              tileColor: Colors.grey[200],
+              textColor: Colors.black,
+              leading: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minWidth: 64,
+                  minHeight: 64,
+                  maxWidth: 84,
+                  maxHeight: 84,
+                ),
+                child:
+                Image.asset("assets/images/widearm.gif", fit: BoxFit.cover),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ListTile(
+              visualDensity: VisualDensity(vertical:4),
+              title: Text("Cobra Stretch",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),),
+              subtitle: Text("20 sn"),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(4)),
+              onTap: () {
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Cobra(
+
+                    ),
+                  ),
+                );
+
+              },
+              tileColor: Colors.grey[200],
+              textColor: Colors.black,
+              leading: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minWidth: 64,
+                  minHeight: 64,
+                  maxWidth: 84,
+                  maxHeight: 84,
+                ),
+                child:
+                Image.asset("assets/images/cobra.gif", fit: BoxFit.cover),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ListTile(
+              visualDensity: VisualDensity(vertical:4),
+              title: Text("Hindu Push Ups",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),),
+              subtitle: Text("x10"),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(4)),
+              onTap: () {
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Hindu(
+
+                    ),
+                  ),
+                );
+
+              },
+              tileColor: Colors.grey[200],
+              textColor: Colors.black,
+              leading: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minWidth: 64,
+                  minHeight: 64,
+                  maxWidth: 84,
+                  maxHeight: 84,
+                ),
+                child:
+                Image.asset("assets/images/hindu.gif", fit: BoxFit.cover),
+              ),
+            ),
+          ),
+
         ],
       ),
       backgroundColor: Colors.white,
